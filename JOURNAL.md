@@ -1,133 +1,110 @@
 # Universal Hacking Tool (UHT)
 
-## Portable Cybersecurity & RF Research Platform
+![Universal Hacking Tool project design](../images/uht-concept.png)
 
-The **Universal Hacking Tool (UHT)** is a portable, all-in-one cybersecurity and RF research platform designed for authorized security testing, CTF environments, electronics experimentation, spectrum analysis, and controlled laboratory research.
+## Project Overview
 
-The device combines a Raspberry Pi 5, LimeSDR Mini 2.0, ESP32-S3, CC1101 sub-GHz radio, touchscreen interface, and USB-C power management inside a custom 3D-printed enclosure.
+The **Universal Hacking Tool (UHT)** is a portable cybersecurity and RF research platform designed for authorized security research, CTF environments, electronics experimentation, spectrum analysis, and controlled laboratory testing.
 
-The project is also intended to develop practical skills in embedded systems, Linux, electronics, RF technology, 3D design, mechanical engineering, and cybersecurity.
+The device combines a Raspberry Pi 5, LimeSDR Mini 2.0, ESP32-S3, CC1101 sub-GHz transceiver, touchscreen interface, and USB-C power management inside a custom enclosure.
 
-All cybersecurity and RF testing will be performed only on systems, devices, networks, and frequencies where I have authorization to experiment.
+The project will also help me develop practical skills in Linux, embedded systems, electronics, RF technology, CAD, 3D printing, mechanical design, and cybersecurity.
+
+All cybersecurity and RF experimentation will be performed only on systems, devices, networks, and frequencies where I have authorization to experiment.
 
 ---
 
-# Why a 3D Printer Is Required
+## Why I Need a 3D Printer
 
-The **3D printer is an essential manufacturing tool for this project**, not just an optional tool.
+A **3D printer is one of the key manufacturing tools for this project**.
 
-The Universal Hacking Tool combines several different electronic boards and modules that do not share a standard enclosure. A custom mechanical structure is therefore required to safely hold the components together.
+The electronic modules have different dimensions and mounting arrangements, so I need a custom enclosure rather than a standard off-the-shelf case.
 
-The 3D printer will be used to manufacture:
+The 3D printer will allow me to manufacture:
 
 * Main chassis frame
-* Touchscreen display bezel
+* Touchscreen bezel
 * Raspberry Pi support bracket
 * ESP32-S3 mounting bracket
 * CC1101 mounting bracket
 * Antenna mounting bay
-* Internal cable-routing structures
-* External protective enclosure
-* Additional replacement or revised parts during development
+* Cable-routing structures
+* Protective outer shell
 
-Using 3D printing allows the enclosure to be repeatedly redesigned as the electronics evolve.
-
-Instead of purchasing a fixed commercial enclosure, I can design the mechanical parts specifically around the dimensions and mounting holes of the electronics.
+The printer will also allow me to quickly prototype, test, modify, and reprint components as the design develops.
 
 ---
 
-# Role of the 3D Printer
+## Role of the 3D Printer
 
-The 3D printer will be used throughout the development process.
+The printer will be involved throughout the engineering process.
 
-### 1. Mechanical Prototyping
+### Mechanical Prototyping
 
-Before creating the final enclosure, smaller prototypes can be printed to verify:
+I can print small prototypes to check:
 
 * Component dimensions
-* Mounting-hole positions
+* Mounting-hole locations
 * Screen alignment
 * Board clearances
 * Cable routing
-* Connector accessibility
+* Connector access
 
-### 2. Custom Enclosure Manufacturing
+### Custom Enclosure
 
-The final chassis and outer shell will protect the electronics and keep the system compact enough for portable use.
+The final printed enclosure will hold and protect the electronics while keeping the device compact and portable.
 
-### 3. Modular Mounting
+### Modular Mounting
 
-Separate printed brackets will hold individual electronic modules.
+Individual brackets will allow components to be removed or replaced without redesigning the entire enclosure.
 
-This allows individual components to be removed or replaced without redesigning the entire enclosure.
+### Iterative Development
 
-### 4. Iterative Engineering
+If something does not fit correctly, I can modify the CAD model and produce another prototype.
 
-If a component does not fit correctly, the relevant CAD model can be modified and reprinted.
-
-This makes the 3D printer an important part of the project's engineering workflow.
-
-### 5. Repair and Upgrades
-
-If a bracket or enclosure component breaks, an updated replacement can be printed.
-
-Future hardware upgrades can also receive new custom mounting parts.
+This makes the printer an important part of the development cycle.
 
 ---
 
-# 3D Printing Materials
-
-The project will use different materials depending on the component.
+## Materials
 
 ### PETG
 
-Planned for structural components such as:
-
-* Main chassis
-* Electronics brackets
-* Antenna mounting structures
-
-PETG provides a useful combination of strength, durability, and ease of fabrication.
+PETG will be considered for structural components such as the chassis and electronics brackets because of its useful durability and ease of printing.
 
 ### PLA
 
-May be used for:
-
-* Display bezel
-* Prototype parts
-* Cosmetic components
-
-PLA is useful for quickly testing mechanical designs before producing final structural versions.
+PLA may be used for early prototypes, display components, and cosmetic parts where appropriate.
 
 ### ABS
 
-May be considered for components requiring higher temperature resistance, depending on printer capability and enclosure requirements.
+ABS may be used for components where greater temperature resistance is useful, provided the printer and printing environment are suitable.
 
 ---
 
-# Required Tools
+## Required Tools
 
-## Manufacturing
+### Manufacturing
 
-* **3D printer — PETG/ABS capable**
-* 3D-printing slicer software
+* PETG/ABS-capable 3D printer
+* Slicer software
 * CAD/modeling software
 
-## Electronics
+### Electronics
 
 * Fine-tip soldering iron
 * Heat-set insert tip
 * Precision wire strippers
 * Multimeter
 
-## Mechanical Assembly
+### Mechanical Assembly
 
 * M3 hex key set
 * Phillips/flat-head screwdriver set
 
 ---
 
-# Manufacturing Workflow
+## Manufacturing Workflow
 
 ```text
 CAD Design
@@ -149,19 +126,33 @@ Electronics Installation
 Testing
 ```
 
-The enclosure will therefore be developed alongside the electronics rather than being treated as a final step.
+The mechanical design will be developed alongside the electronics instead of being treated as something completed only at the end.
 
 ---
 
-# Fabrication Phase
+## Development Approach
 
-## 1.1 — Design and Prepare 3D Models
+I will develop the project iteratively:
 
-Before printing, the enclosure and mounting components will be checked against the dimensions of the electronics.
+1. Design
+2. Prototype
+3. Test
+4. Identify problems
+5. Modify the design
+6. Reprint
+7. Assemble
+8. Test again
+9. Document the results
 
-Parts include:
+This approach allows the physical design to evolve together with the electronics and software.
 
-* Main chassis frame
+---
+
+## Initial Fabrication Plan
+
+The first fabrication stage will involve creating and testing:
+
+* Main chassis
 * Display bezel
 * SBC support bracket
 * Antenna mounting bay
@@ -169,71 +160,34 @@ Parts include:
 * Sub-GHz radio mount
 * Outer shell
 
-**Status:** ⬜ Not started
+After printing, the parts will be inspected for dimensional accuracy, warping, layer quality, mounting-hole accuracy, and fit.
 
-## 1.2 — 3D Print Chassis Components
-
-The selected components will be printed using the appropriate material and slicer settings.
-
-Each part will be inspected for:
-
-* Warping
-* Layer separation
-* Dimensional accuracy
-* Mounting-hole accuracy
-* Surface defects
-
-**Status:** ⬜ Not started
-
-## 1.3 — Install Heat-Set Inserts
-
-M3 heat-set inserts will be installed into designated mounting points.
-
-These allow the enclosure to be repeatedly assembled and disassembled without damaging the printed plastic.
-
-**Status:** ⬜ Not started
-
-## 1.4 — Clean and Test-Fit Components
-
-Printed components will be cleaned and deburred.
-
-The electronics will then be test-fitted before final assembly.
-
-**Status:** ⬜ Not started
+M3 heat-set inserts will then be installed where required.
 
 ---
 
-# Project Development Philosophy
+## Responsible Use
 
-The Universal Hacking Tool will be developed as an iterative hardware project.
+Although the project is named **Universal Hacking Tool**, its purpose is legitimate cybersecurity education and authorized research.
 
-Rather than designing everything once and immediately producing a final device, I will:
-
-1. Design
-2. Prototype
-3. Test
-4. Document problems
-5. Modify the design
-6. Reprint
-7. Assemble
-8. Test again
-
-The 3D printer makes this iterative process possible and is therefore one of the core tools required to build the project.
-
----
-
-# Responsible Use
-
-Despite the project name **Universal Hacking Tool**, the device is intended for legitimate cybersecurity education and authorized research.
-
-Examples include:
+The platform will be used for:
 
 * Personal cybersecurity labs
 * Capture-the-Flag competitions
-* Hardware experimentation
+* Electronics experimentation
 * RF education
 * Spectrum analysis
 * Embedded-system research
-* Testing devices that I own or have explicit permission to test
+* Testing devices and systems that I own or have explicit permission to test
 
-The project will not be designed or used to gain unauthorized access to computers, networks, accounts, communications, or other people's devices.
+I will not use the project to gain unauthorized access to computers, networks, accounts, communications, or other people's devices.
+
+---
+
+## Current Status
+
+**Phase:** Planning and design
+
+**Progress:** Initial project architecture and manufacturing plan completed.
+
+**Next step:** Finalize the enclosure/CAD design and begin prototyping the 3D-printed components.
